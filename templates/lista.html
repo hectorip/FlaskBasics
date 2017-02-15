@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <ul>
+    {% for alumno in lista %}
+        <li> {{alumno.nombre}}: {{alumno["apodo"]}} </li>
+    {% endfor %}
+  </ul>
+
+  {% if lista|length > 10 %}
+    El grupo se va a abrir
+  {% else %}
+    Son muy pocos para abrir el grupo.
+  {% endif %}
+
+{% endblock %}
